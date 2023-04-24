@@ -1,0 +1,120 @@
+TotalPrice = int(200)
+FruitArr = ["FR1", "FR2", "FR3", "FR4"]
+FruitDesc = ["Apple", "Banana", "Orange", "Peach"]
+FruitPrice = ["1", "1.25", "1", "1.30"]
+SandwichArr = ["SN1", "SN2", "SN3", "SN4", "SN5"]
+SandwichDesc = ["Cheese", "Cheese and Tomato", "Chicken", "Chicken Salad", "Salad"]
+SandwichPrice = ["1.75", "2.20", "2.00", "2.00",  "2.35"]
+CrispsArr = ["CR1", "CR2", "CR3", "CR4"]
+CrispsDesc = ["Salted", "Cheese and Onion", "Barnecue", "Prawn Cocktail"]
+CrispsPrice = ["1.00", "1.00",  "1.00", "1.00"]
+ConfectioneryArr = ["CN1", "CN2", "CN3", "CN4"]
+ConfectioneryDesc = ["Biscuits", "Chocolate Bar", "Toffee and Chocolate Bar", "Chocolate Wafers"]
+ConfectioneryPrice = ["0.95", "1.05", "1.25", "1.30"]
+DrinkArr = ["DR1", "DR2", "DR3", "DR4", "DR5"]
+DrinkDesc = ["Cola", "Lemon and Lime Soda", "Orange Soda", "Orange Juice", "Apple Juice"]
+DrinkPrice = ["1.20", "1.20", "1.20", "1.50", "1.50"]
+ArrAll = ["FR1", "FR2", "FR3", "FR4", "SN1", "SN2", "SN3", "SN4", "SN5", "CR1", "CR2", "CR3", "CR4", "CN1", "CN2", "CN3", "CN4", "DR1", "DR2", "DR3", "DR4", "DR5" ]
+Done = ["Done"]
+# fruit
+FruitInput = str(input("Please choose your Fruit from FR1, FR2, FR3, FR4): "))
+while True:
+    if FruitInput in FruitArr:
+        break
+    else:
+        print("Your input is invalid.")
+        CaseInput = str(input("Please choose your Fruit from FR1, FR2, FR3, FR4): "))
+if FruitInput == FruitArr[0]:
+    fruitVariable = 0
+elif FruitInput == FruitArr[1]:
+    fruitVariable = 1
+elif FruitInput == FruitArr[2]:
+    fruitVariable = 2
+else:
+    fruitVariable = 3
+TotalPrice = TotalPrice + int(FruitPrice[fruitVariable])
+# sandwich
+sandwichInput = str(input("Please choose a Sandwich from SN1,SN2,SN3,SN4,SN5: "))
+while True:
+    if sandwichInput in SandwichArr:
+        break
+    else:
+        print("Your input is invalid.")
+        sandwichInput = str(input("Please choose a Sandwich from SN1,SN2,SN3,SN4,SN5: "))
+if sandwichInput == SandwichArr[0]:
+    sandwichVariable = 0
+elif sandwichInput == SandwichArr[1]:
+    sandwichVariable = 1
+elif sandwichInput == SandwichArr[2]:
+    sandwichVariable = 2
+elif sandwichInput == SandwichArr[3]:
+    sandwichVariable = 3
+else:
+    sandwichVariable = 4
+TotalPrice = TotalPrice + float(SandwichPrice[sandwichVariable])
+# Crisps
+CrispsInput = str(input("Please choose a Crisps from CR1,CR2,CR3,CR4: "))
+while True:
+    if CrispsInput in CrispsArr:
+        break
+    else:
+        print("Your input is invalid")
+        CrispsInput = str(input("Please choose a Crisps from CR1,CR2,CR3,CR4: "))
+if CrispsInput == CrispsArr[0]:
+    crispsVariable = 0
+elif CrispsInput == CrispsArr[1]:
+    crispsVariable = 1
+elif CrispsInput == CrispsArr[2]:
+    crispsVariable = 2
+else:
+    crispsVariable = 3
+TotalPrice = TotalPrice + float(CrispsPrice[crispsVariable])
+# Confectionery
+ConfectioneryInput = str(input("Please choose a Confectionery from CN1,CN2,CN3,CN4: "))
+while True:
+    if ConfectioneryInput in ConfectioneryArr:
+        break
+    else:
+        print("You're input is invalid")
+        ConfectioneryInput = str(input("Please choose a Confectionery from CN1,CN2,CN3,CN4: "))
+if ConfectioneryInput == ConfectioneryArr[0]:
+    confectioneryVariable = 0
+elif ConfectioneryInput == ConfectioneryArr[1]:
+    confectioneryVariable = 1
+elif ConfectioneryInput == ConfectioneryArr[2]:
+    confectioneryVariable = 2
+else:
+    confectioneryVariable = 3
+TotalPrice = TotalPrice + float(ConfectioneryPrice[confectioneryVariable])
+# Drink
+DrinkInput = str(input("Please choose a Drink from DR1,DR2,DR3,DR4,DR5: "))
+while True:
+    if DrinkInput in DrinkArr:
+        break
+    else:
+        print("You're input is invalid")
+        DrinkInput = str(input("Please choose a Drink from DR1,DR2,DR3,DR4,DR5: "))
+if DrinkInput == DrinkArr[0]:
+    drinkVariable = 0
+elif DrinkInput == DrinkArr[1]:
+    drinkVariable = 1
+elif DrinkInput == DrinkArr[2]:
+    drinkVariable = 2
+elif DrinkInput == DrinkArr[3]:
+    drinkVariable = 3
+else:
+    drinkVariable = 4
+TotalPrice = TotalPrice + float(DrinkPrice[drinkVariable])
+print("Please input 'Done'")
+CustomerChoice = str(input("Your choice: "))
+while True:
+    if CustomerChoice in Done :
+        break
+    else:
+        print("Your choice is invalid.")
+        CustomerChoice = str(input("Your choice (If you are done selecting please enter 'Done'): "))
+print("Chosen fruit:", FruitDesc[fruitVariable], ", price: ", FruitPrice[fruitVariable], "$, item code: ", FruitArr[fruitVariable], "healthy")
+print("Chosen sandwich:", SandwichDesc[sandwichVariable], ", price: ", SandwichPrice[sandwichVariable], "$, item code: ", SandwichArr[sandwichVariable], "healthy")
+print("Chosen Crisps:", CrispsDesc[crispsVariable], ", price: ", CrispsPrice[crispsVariable], "$, item code: ", CrispsArr[crispsVariable], "not healthy")
+print("Chosen fruit:", ConfectioneryDesc[confectioneryVariable], ", price: ", ConfectioneryPrice[confectioneryVariable], "$, item code: ", ConfectioneryArr[confectioneryVariable], "not healthy")
+print("Chosen Drink:", DrinkDesc[drinkVariable], ", price: ", DrinkPrice[drinkVariable], "$, item code: ", DrinkArr[drinkVariable], "not healthy")
