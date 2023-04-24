@@ -1,0 +1,17 @@
+Price = 500
+c = 0
+while c<2:
+    Overnight_place = str(input("Which overnight place are you choosing/Garage, Drive, Street/? Please, note that the price can change depending the place. "))
+    if Overnight_place == "Garage":
+        print(Price/100*95)
+        c = c + 2
+    else:
+        if Overnight_place == "Drive":
+            print(Price/100*100)
+            c = c + 2
+        else:
+            if Overnight_place == "Street":
+                print(Price/100*105)
+                c = c + 2
+            else:
+                print ("PLease enter the name correctly")
