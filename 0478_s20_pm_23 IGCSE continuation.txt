@@ -1,0 +1,121 @@
+UnhealthyChoose = str(0)
+TotalPrice = int(0)
+UnhealthyFood = ["Yes", "No"]
+FruitArr = ["FR1", "FR2", "FR3", "FR4"]
+FruitDesc = ["Apple", "Banana", "Orange", "Peach"]
+FruitPrice = [1.00, 1.25, 1.00, 1.30]
+FruitHeal = ["Healthy", "Healthy", "Healthy", "Healthy"]
+SandwichArr = ["SN1", "SN2", "SN3", "SN4", "SN5"]
+SandwichDesc = ["Cheese", "Cheese and Tomato", "Chicken", "Chicken Salad", "Salad"]
+SandwichPrice = [1.75, 2.20, 2.00, 2.00,  2.35]
+SandwichHeal = ["Healthy", "Healthy", "Healthy", "Healthy", "Healthy"]
+CrispsArr = ["CR1", "CR2", "CR3", "CR4"]
+CrispsDesc = ["Salted", "Cheese and Onion", "Barnecue", "Prawn Cocktail"]
+CrispsPrice = [1.00, 1.00,  1.00, 1.00]
+CrispsHeal = ["Unhealthy", "Unhealthy", "Unhealthy", "Unhealthy"]
+ConfectioneryArr = ["CN1", "CN2", "CN3", "CN4"]
+ConfectioneryDesc = ["Biscuits", "Chocolate Bar", "Toffee and Chocolate Bar", "Chocolate Wafers"]
+ConfectioneryPrice = [0.95, 1.05, 1.25, 1.30]
+ConfectioneryHeal = ["Unhealthy", "Unhealthy", "Unhealthy", "unhealthy", "unhealthy"]
+DrinkArr = ["DR1", "DR2", "DR3", "DR4", "DR5"]
+DrinkDesc = ["Cola", "Lemon and Lime Soda", "Orange Soda", "Orange Juice", "Apple Juice"]
+DrinkPrice = [1.20, 1.20, 1.20, 1.50, 1.50]
+Drinkheal = ["Unhealthy","Unhealthy","Unhealthy", "Healthy", "Healthy"]
+ArrAll = ["FR1", "FR2", "FR3", "FR4", "SN1", "SN2", "SN3", "SN4", "SN5", "CR1", "CR2", "CR3", "CR4", "CN1", "CN2", "CN3", "CN4", "DR1", "DR2", "DR3", "DR4", "DR5" ]
+Done = ["Done"]
+Fruit=str()
+NumberFriut=int(0)
+Sandwich = str()
+NumberSandwich = int(0)
+Crisps = str()
+NumberCrisps = int(0)
+Confectionery = str()
+NumberConfectionery = int(0)
+Drink = str()
+NumberDrink = int(0)
+print("You are choosing Fruit. Please choose from FR1, FR2, FR3, FR4")
+print("You are choosing Sandwich. Please choose from SN1, SN2, SN3, SN4, SN5")
+print("You are choosing Crisps. Please choose from CR1, CR2, CR3, CR4")
+print("You are choosing Confectionery. Please choose from CN1, CN2, CN3, CN4")
+Fruit=input("Input FRIUT ID ")
+Sandwich=input("Input FRIUT ID  ")
+Crisps = input("Input CRISPS ID  ")
+Confectionery=input("Input CONFECTIONERY ID ")
+while Fruit not in FruitArr:
+    print = ("You are choosing Fruit. Please choose from FR1, FR2, FR3, FR4")
+    Fruit=input("Input FRIUT ID ")
+NumberFriut=int(input("How many friuts will you buy? "))
+for i in [0, 1, 2, 3]:
+    if Fruit == FruitArr[i]:
+        print("You Friut Description is ", FruitDesc[i])
+        print("You Friut Price is ", FruitPrice[i])
+        print("You Friut healthy is ", FruitHeal[i])
+for i in [0, 1, 2, 3]:
+    if Fruit == FruitArr[i]:
+        FruitTotalPrice = NumberFriut*FruitPrice[i]
+        print("You Friut TotalPrice is ", FruitTotalPrice)
+while Sandwich not in SandwichArr:
+    print("You are choosing Sandwich. Please choose from SN1, SN2, SN3, SN4, SN5")
+    Sandwich=input("Input FRIUT ID  ")
+NumberSandwich =int(input("How many Sandwiches will you buy? "))
+for i in [0, 1, 2, 3, 4]:
+    if Sandwich == SandwichArr[i]:
+        print("You Friut Description is ", SandwichDesc[i])
+        print("You Friut Price is ", SandwichPrice[i])
+        print("You Friut healthy is ", SandwichHeal[i])
+for i in [0, 1, 2, 3]:
+    if Sandwich == SandwichArr[i]:
+        SandwichTotalPrice = NumberSandwich*SandwichPrice[i]
+        print("You Sandwich TotalPrice is ", SandwichTotalPrice)
+while Crisps not in CrispsArr:
+    print("You are choosing Crisps. Please choose from CR1, CR2, CR3, CR4")
+    Crisps=input("Input CRISPS ID  ")
+NumberCrisps =int(input("How many Crisps will you buy? "))
+for i in [0, 1, 2, 3]:
+    if Crisps == CrispsArr[i]:
+        print("You Crisps Description is ", CrispsDesc[i])
+        print("You Crisps Price is ", CrispsPrice[i])
+        print("You Fruit healthy is ", CrispsHeal[i])
+for i in [0, 1, 2, 3]:
+    if Crisps == CrispsArr[i]:
+        CrispsTotalPrice = NumberCrisps*CrispsPrice[i]
+        print("You Crisps TotalPrice is ", CrispsTotalPrice)
+while Confectionery not in ConfectioneryArr:
+    print("You are choosing Confectionery. Please choose from CN1, CN2, CN3, CN4")
+    Crisps=input("Input CRISPS ID  ")
+NumberCrisps =int(input("How many Confectioneries will you buy? "))
+for i in [0, 1, 2, 3]:
+    if Confectionery == ConfectioneryArr[i]:
+        print("You Confectionery Description is ", ConfectioneryDesc[i])
+        print("You Confectionery Price is ", ConfectioneryPrice[i])
+        print("You Confectionery healthy is ", ConfectioneryHeal[i])
+for i in [0, 1, 2, 3]:
+    if Confectionery == ConfectioneryArr[i]:
+        ConfectioneryTotalPrice = NumberConfectionery*ConfectioneryPrice[i]
+        print("You Confectionery TotalPrice is ", ConfectioneryTotalPrice)
+print ("These is additional items, will you choose drink, you can choose from DR1, DR2, DR3, DR4, DR5")
+print ("If you do not want any of these, please input 'done' ")
+Drink=input("Input DRINK ID ")
+while Drink not in DrinkArr:
+    print ("These is additional items, will you choose drink, you can choose from DR1, DR2, DR3, DR4, DR5")
+    Drink=input("Input DRINK ID ")
+NumberDrink =int(input("How many Drinks will you buy? "))
+for i in [0, 1, 2, 3, 4]:
+    if Drink == DrinkArr[i]:
+        print("You Drink Description is ", DrinkDesc[i])
+        print("You Drink Price is ", DrinkPrice[i])
+        print("You Drink healthy is ", Drinkheal[i])
+for i in [0, 1, 2, 3, 4]:
+    if Drink == DrinkArr[i]:
+        DrinkTotalPrice = NumberDrink*DrinkPrice[i]
+        print("You Drink TotalPrice is ", DrinkTotalPrice)
+TotalPrice = FruitTotalPrice + SandwichTotalPrice + ConfectioneryTotalPrice + CrispsTotalPrice + DrinkTotalPrice
+print("Your TotalPrice:", TotalPrice)
+print("Congrats, you have been discounted, do you also want to add unhealthy food? Please choose from Yes or No")
+UnhealthyChoose = input()
+if UnhealthyChoose in UnhealthyFood :
+    TotalPrice = TotalPrice - TotalPrice * 0.10
+    print ("Your discounted price is: ", TotalPrice)
+else:
+    TotalPrice = (TotalPrice - CrispsTotalPrice - ConfectioneryTotalPrice) - (TotalPrice - CrispsTotalPrice - ConfectioneryTotalPrice) * 0.20
+    print ("Your discounted price is: ", TotalPrice)
