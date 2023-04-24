@@ -1,0 +1,30 @@
+TicketCost = 25.00 
+TrainsUpTime = [9, 11, 13, 15] 
+TrainsUpTicket = [480, 480, 480, 480] 
+TrainsUpMoney = [0.0, 0.0, 0.0, 0.0] 
+TrainsDownTime = [10, 12, 14, 16] 
+TrainsDownTicket = [480, 480, 480, 480]
+TrainsDownMoney = [0.0, 0.0, 0.0, 0.0]
+print ("Train Time \t\t Tickets \t TicketsAvailable") 
+for count in range(0, 4): 
+    print (TrainsUpTime[count],"\t\t\t", TrainsUpTicket[count], "\t\t\t", TrainsUpMoney[count]) 
+    print (TrainsDownTime[count],"\t\t\t", TrainsDownTicket[count], "\t\t\t", TrainsDownMoney[count] ) 
+SellTickets = "yes"
+while SellTickets == "yes":
+    TimeUp = int(input("What time do you want to go up the mountain? Please choose from these times 9, 11, 13, 15"))
+    while TimeUp !=9 and TimeUp != 11 and TimeUp != 13 and TimeUp != 15:
+        TimeUp = int(input("Error. Please choose from these numbers. 9, 11, 13, 15"))
+    for count in range(0,4):
+        if TimeUp == TrainsUpTime[count]:
+            IndexUp = count
+    TimeDown = int(input("What time do you want go down from mountain? 10, 12, 14, 16"))
+    while TimeDown < TimeUp or (TimeDown != 10 and TimeDown !=12 and TimeDown != 14 and TimeDown != 16):
+        TimeDown = int(input("Error. Please choose from these numbers. 10, 12, 14, 16"))
+    for count in range(0,4):
+        if TimeDown == TrainsDownTime[count]:
+            IndexDown = count
+    NumberTickets = int(input("How many tickets do you want to buy and 10th ticket is always free"))
+    while NumberTickets > TrainsUpTicket[IndexUp] or NumberTickets > TrainsDownTicket[IndexDown]:
+        NumberTickets  = (int(input("Error. Please choose available number, How many tickets do you want to buy and 10th ticket is always free")))
+    JourneyCost = TicketCost * (NumberTickets - int(NumberTickets/10))
+    print ("Your jourey costs in one path is ", JourneyCost)
